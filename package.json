@@ -6,7 +6,6 @@
     "serve": "vue-cli-service serve",
     "start": "npm run serve",
     "build": "vue-cli-service build",
-    "deploy": "npm run build && now ./dist -A ./now.json -p",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
