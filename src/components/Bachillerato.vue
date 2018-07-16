@@ -71,7 +71,7 @@
       </div>
 
       <!-- Acciones -->
-      <p>
+      <div class="Bachillerato-actions">
         <button class="button is-primary is-rounded" @click="calc()">
           <b-icon icon="reload"></b-icon>
           <span>Aleatorio</span>
@@ -85,7 +85,17 @@
           <b-icon icon="cloud-print-outline"></b-icon>
           <span>Descargar</span>
         </button>
-      </p>
+
+        <div class="Bachillerato-credits">
+          <b-tooltip label="github.com/raulghm/bachillerato"
+            type="is-dark"
+            position="is-top">
+            <a href="https://github.com/raulghm/bachillerato" target="_blank">
+              <b-icon icon="github-circle"></b-icon>
+            </a>
+          </b-tooltip>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -206,6 +216,7 @@ export default {
 .Bachillerato-header .Bachillerato-item {
   border-bottom: 3px solid #999;
   font-weight: bold;
+  padding: 1.4em 2em;
 }
 
 .Bachillerato-header .Bachillerato-item:last-child {
@@ -270,7 +281,8 @@ export default {
   bottom: 0;
   left: 0;
   background-image: url("https://d33wubrfki0l68.cloudfront.net/e18f62414900204e2edf2ba387c0ab220c0e7a52/bb198/static/img/bgr-page.svg");
-  background-size: cover;
+  background-size: 300%;
+  background-position: 50%;
   z-index: -1;
 }
 
@@ -290,5 +302,26 @@ export default {
 
 .Bachillerato .button {
   margin-right: 10px;
+}
+
+/* Actions */
+
+.Bachillerato-actions {
+  position: relative;
+}
+
+.Bachillerato-credits {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 14px;
+}
+
+.Bachillerato-credits a {
+  color: #fff;
+}
+
+.Bachillerato-credits .icon {
+  vertical-align: top;
 }
 </style>
