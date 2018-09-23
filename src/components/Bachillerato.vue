@@ -12,7 +12,11 @@
           v-for="(category, i) in result"
           :key="`a-${i}`"
         >
-          <span v-text="category.name"></span>
+          <span
+            contenteditable
+            v-text="category.name"
+          >
+          </span>
         </div>
 
         <div class="Bachillerato-item">
@@ -72,9 +76,9 @@
 
       <!-- Acciones -->
       <div class="Bachillerato-actions">
-        <button class="button is-primary is-rounded" @click="calc()">
+        <button class="button is-primary is-outlined is-rounded" @click="calc()">
           <b-icon icon="reload"></b-icon>
-          <span>Aleatorio</span>
+          <span>Combinar</span>
         </button>
         <button
           class="button is-danger is-outlined is-rounded"
@@ -215,12 +219,17 @@ export default {
 
 .Bachillerato-header .Bachillerato-item {
   border-bottom: 3px solid #999;
-  font-weight: bold;
-  padding: 1.4em 2em;
+  font-weight: 600;
+  padding: 1em 2em;
 }
 
 .Bachillerato-header .Bachillerato-item:last-child {
   border-right: 0;
+  font-weight: 500;
+}
+
+.Bachillerato-header .Bachillerato-item:first-child {
+  font-weight: 500;
 }
 
 .Bachillerato-header .Bachillerato-item:after {
@@ -249,9 +258,16 @@ export default {
   letter-spacing: 1px;
 }
 
+.Bachillerato-item:nth-child(2n) {
+  background-color: #dcdcdc30;
+}
+
 .Bachillerato-item span {
   max-width: 120px;
   display: inline-flex;
+  outline-color: #652ec3;
+  transition: all .2s ease;
+  border-radius: 2px;
 }
 
 .Bachillerato-item:first-child span {
