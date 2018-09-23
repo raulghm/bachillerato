@@ -1,6 +1,4 @@
-# Generador de bachilleratos
-
-> WIP
+# Generador de bachilleratos ✏️
 
 ## Features
 
