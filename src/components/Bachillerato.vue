@@ -76,7 +76,7 @@
 
       <!-- Acciones -->
       <div class="Bachillerato-actions">
-        <button class="button is-primary is-outlined is-rounded" @click="calc()">
+        <button class="button is-primary is-rounded" @click="calc()">
           <b-icon icon="reload"></b-icon>
           <span>Combinar</span>
         </button>
@@ -142,15 +142,6 @@ export default {
         `
       }
     }
-
-    /**
-     * Numero de celdas
-     * Calcula las filas hacia abajo +
-     * columna letra y total
-     */
-    // cells () {
-    //   return (this.categoriesNum * this.maxRows) + (2 * this.maxRows)
-    // }
   },
 
   methods: {
@@ -287,6 +278,18 @@ export default {
   box-shadow: 0 0 9px 1px rgba(0,0,0,.4);
   border-radius: 10px;
   color: #fff;
+  margin-top: -20px;
+  opacity: 0;
+  visibility: hidden;
+  animation: anim-fadeIn 1s 1s ease forwards;
+}
+
+@keyframes anim-fadeIn {
+  100% {
+    opacity: 1;
+    visibility: visible;
+    margin-top: 0;
+  }
 }
 
 .Bachillerato-control:after {
