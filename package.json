@@ -11,7 +11,7 @@
   "dependencies": {
     "buefy": "^0.8.8",
     "html2canvas": "^1.0.0-alpha.12",
-    "jspdf": "^1.5.3",
+    "jspdf": "^2.3.1",
     "vue": "^2.6.11"
   },
   "devDependencies": {
